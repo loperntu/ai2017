@@ -41,6 +41,13 @@ knit        : slidify::knit2slides
 
 <img src="assets/img/jiajia.jpg" alt="Drawing" style="width: 500px;"/>
 
+---
+## 常被大眾談論（與誤解）的例子
+
+- 語音辨識 = 語言理解 
+- (語音辨識 + 字串關聯比對的) 聊天機器人 = AI
+
+> 繼 `語音` 之後，`語意`（理解）是關鍵。
 
 ---
 ## AI: 目前走多遠了
@@ -74,6 +81,7 @@ Deep Neural Networks`
 
 --- .cover .w #FitToWidth
 ## AI
+
 <img src="assets/img/ai.png" alt="Drawing" style="width: 850px;"/>
 
 
@@ -85,13 +93,41 @@ Deep Neural Networks`
 <img src="assets/img/zoo.jpg" alt="Drawing" style="width: 850px;"/>
 
 ---
-## (End-to-End) AI in 7 lines of code
+## (End-to-End) AI 實作快變成中學生的課外活動
 
 <img src="assets/img/dl.png" alt="Drawing" style="width: 750px;"/>
 
 
+---
+## Issues
 
+- 不是每個領域都有可得的大數據 (big data)。
+- 不是每個問題都有標準答案 (labeled data)。
+- 理解活動可能不是模型或是序列匹配 (pattern matching/seq2seq chatbot)
 
+---
+## 這不是我們所理解的「理解」吧？
+
+ `YOU: My _1_ is _2_`   
+ `ELIZA: How long has your _1_ been _2_ ?`
+ 
+ 
+ `YOU: _1_ 覺得我很 _2_`  
+ `CELIZA: 那妳覺得妳很 _2_ 嗎？`
+
+---
+##  資料夠大也不一定穩定
+
+<img src="assets/img/pttchat.png" alt="Drawing" style="width: 750px;"/>
+
+--- 
+## Deep (Linguistic) Learning: batteries included?
+
+But, which Semantics?
+
+- Lexical Semantics
+- Neural Semantics
+- Vector Semantics
 
 
 ---
@@ -101,7 +137,7 @@ Deep Neural Networks`
 
 
 ---
-## Lexical network ([`Chinese Wordnet`]()) and [Graph](http://lope.padagraph.io/)
+## Lexical network ([`Chinese Wordnet`]())
 <img src="assets/img/cwn.png" alt="Drawing" style="width: 400px;"/>
 
 
