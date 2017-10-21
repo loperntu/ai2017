@@ -137,6 +137,13 @@ But, which Semantics?
 
 
 ---
+## Network Analysis
+
+`micro motifs and macro behavior`
+- focuses on (in)dependent actors at the `micro level` and the consequences of their behavior at the `macro level`.
+- **Small worlds**: 'six degrees of separation'
+
+---
 ## Lexical network ([`Chinese Wordnet`]())
 <img src="assets/img/cwn.png" alt="Drawing" style="width: 400px;"/>
 
