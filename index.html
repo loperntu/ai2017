@@ -142,6 +142,12 @@ Deep Neural Networks</code></p>
 </section>
 <section class="slide " id="slide-12">
   <div>
+    <h2>Keras: Deep Learning library in R or Python within 30 seconds</h2>
+    
+  </div>
+</section>
+<section class="slide " id="slide-13">
+  <div>
     <h2>Issues</h2>
     <ul>
 <li>不是每個領域都有可得的大數據 (big data)。</li>
@@ -151,7 +157,7 @@ Deep Neural Networks</code></p>
 
   </div>
 </section>
-<section class="slide " id="slide-13">
+<section class="slide " id="slide-14">
   <div>
     <h2>這不是我們所理解的「理解」吧？</h2>
     <p><code>YOU: My _1_ is _2_</code><br>
@@ -162,14 +168,14 @@ Deep Neural Networks</code></p>
 
   </div>
 </section>
-<section class="slide " id="slide-14">
+<section class="slide " id="slide-15">
   <div>
     <h2>資料夠大也不一定穩定</h2>
     <p><img src="assets/img/pttchat.png" alt="Drawing" style="width: 750px;"/></p>
 
   </div>
 </section>
-<section class="slide " id="slide-15">
+<section class="slide " id="slide-16">
   <div>
     <h2>Deep (Linguistic) Learning: batteries included?</h2>
     <p>But, which Semantics?</p>
@@ -182,33 +188,98 @@ Deep Neural Networks</code></p>
 
   </div>
 </section>
-<section class="slide " id="slide-16">
+<section class="slide " id="slide-17">
   <div>
     <h2>Network Representation of Semantics</h2>
     <iframe width="520" height="415" src="assets/widgets/nn.html" frameborder="0" allowfullscreen></iframe>
 
   </div>
 </section>
-<section class="slide " id="slide-17">
+<section class="slide " id="slide-18">
   <div>
     <h2>Network Analysis</h2>
     <p><code>micro motifs and macro behavior</code></p>
 
 <ul>
 <li>focuses on (in)dependent actors at the <code>micro level</code> and the consequences of their behavior at the <code>macro level</code>.</li>
-<li><strong>Small worlds</strong>: &#39;six degrees of separation&#39;</li>
+<li><em>ideographic</em> approach stresses the uniqueness of a phenomenon; <em>nomothetic</em> approach stresses law-likeness.</li>
 </ul>
 
   </div>
 </section>
-<section class="slide " id="slide-18">
+<section class="slide " id="slide-19">
+  <div>
+    <h2><strong>Small worlds</strong>:</h2>
+    <p>&#39;six degrees of separation&#39; (Watts and Strogatz, 1998)</p>
+
+<pre><code class="r">sw &lt;- sample_smallworld(dim=2, size=10, nei=1, p=0.1)
+plot(sw, vertex.size=6, vertex.label=NA, layout=layout_in_circle)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+  </div>
+</section>
+<section class="slide " id="slide-20">
   <div>
     <h2>Lexical network (<a href=""><code>Chinese Wordnet</code></a>)</h2>
     <p><img src="assets/img/cwn.png" alt="Drawing" style="width: 400px;"/></p>
 
   </div>
 </section>
-<section class="slide " id="slide-19">
+<section class="slide " id="slide-21">
+  <div>
+    <h2>Vector Semantics</h2>
+    <ul>
+<li>Like the <strong>neural language models</strong>, the <code>word2vec</code> models learn embeddings by training
+a network to predict neighboring words.</li>
+</ul>
+
+  </div>
+</section>
+<section class="slide " id="slide-22">
+  <div>
+    <h2>Vector Semantics</h2>
+    <p>Word Embeddings</p>
+
+<!--
+<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>  -->
+
+<!-- <img src="images/embeddings.png" alt="Drawing" style="width: 400px;"/> -->
+
+  </div>
+</section>
+<section class="slide " id="slide-23">
+  <div>
+    <h2>Neural Semantic Network</h2>
+    <p><code>Gallant lab Brain Viewer</code></p>
+
+  </div>
+</section>
+<section class="slide " id="slide-24">
+  <div>
+    <h2>Neural Semantic Network</h2>
+    
+  </div>
+</section>
+<section class="slide " id="slide-25">
+  <div>
+    <h2>Human Connectome Project (HCP)</h2>
+    <blockquote>
+<p>a <a href="https://www.humanconnectome.org/">consortium</a> whose goal is to map “human brain circuitry in a target number of 1200 healthy adults using cutting-edge methods of noninvasive neuroimaging” </p>
+</blockquote>
+
+  </div>
+</section>
+<section class="slide " id="slide-26">
+  <div>
+    <h2>Neural WordNet</h2>
+    <p><img src="assets/img/ontolex_wn.png" alt="Drawing" style="width: 500px;"/>
+<a href="https://www.youtube.com/watch?v=0FDtsbLZBuM">https://www.youtube.com/watch?v=0FDtsbLZBuM</a> </p>
+
+  </div>
+</section>
+<section class="slide " id="slide-27">
   <div>
     <h2><strong>(Words/Chunks?) on the Brain: A Semantic Map of the Cortex</strong></h2>
     <p>DeepMind 的 leader 要跟神經科學學習 / Hinton 認為 back-propagation 要打掉重練</p>
@@ -217,18 +288,28 @@ Deep Neural Networks</code></p>
 
   </div>
 </section>
-<section class="slide " id="slide-20">
+<section class="slide " id="slide-28">
   <div>
-    <h2>Vector Semantics</h2>
-    <p>Word Embeddings</p>
+    <h2>Chinese QIE</h2>
+    <ul>
+<li>Is Construction Grammar Neuroscientifically Plausible? </li>
+</ul>
 
-<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>
-
-<!-- <img src="images/embeddings.png" alt="Drawing" style="width: 400px;"/> -->
+<!--
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png)
+-->
 
   </div>
 </section>
-<section class="slide " id="slide-21">
+<section class="slide " id="slide-29">
+  <div>
+    <h2>Chinese QIE</h2>
+    <pre><code class="r">#orthographic(img)
+</code></pre>
+
+  </div>
+</section>
+<section class="slide " id="slide-30">
   <div>
     <h2>結論，有嗎之一</h2>
     <h2>AI needs greater representation from the humanities</h2>
@@ -245,7 +326,7 @@ Deep Neural Networks</code></p>
 
   </div>
 </section>
-<section class="slide " id="slide-22">
+<section class="slide " id="slide-31">
   <div>
     <h2>隨堂考試：妳是人嗎</h2>
     <p>下面這句話一秒鐘看完並說出意思</p>
@@ -256,17 +337,19 @@ Deep Neural Networks</code></p>
 
   </div>
 </section>
-<section class="slide " id="slide-23">
+<section class="slide " id="slide-32">
   <div>
     <h2>結論，有嗎之二</h2>
     <p><img src="assets/img/ai.linguistics.png" alt="Drawing" style="width: 750px;"/></p>
 
   </div>
 </section>
-<section class="slide " id="slide-24">
+<section class="slide " id="slide-33">
   <div>
     <h2>Reference</h2>
     <p>[1] Huth AG, de Heer WA, Griffiths TL, Theunissen FE, &amp; Gallant JL (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532 (7600), 453-8 PMID: 27121839</p>
+
+<p>[2] Friedemann Pulvermüller, Bert Cappelle and Yury Shtyrov. (2013). Brain basis of meaning, words, constructions, and grammar. In: Graeme Trousdale and Thomas Hoffmann (eds.), Oxford Handbook of Construction Grammar. Oxford: Oxford University Press, 397-416. </p>
 
   </div>
 </section>

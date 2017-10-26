@@ -99,6 +99,15 @@ Deep Neural Networks`
 
 
 ---
+## Keras: Deep Learning library in R or Python within 30 seconds
+
+```{r, eval=FALSE}
+
+
+```
+
+
+---
 ## Issues
 
 - 不是每個領域都有可得的大數據 (big data)。
@@ -141,13 +150,68 @@ But, which Semantics?
 
 `micro motifs and macro behavior`
 - focuses on (in)dependent actors at the `micro level` and the consequences of their behavior at the `macro level`.
-- **Small worlds**: 'six degrees of separation'
+- *ideographic* approach stresses the uniqueness of a phenomenon; *nomothetic* approach stresses law-likeness.
+
+---
+## **Small worlds**: 
+'six degrees of separation' (Watts and Strogatz, 1998)
+```{r}
+sw <- sample_smallworld(dim=2, size=10, nei=1, p=0.1)
+plot(sw, vertex.size=6, vertex.label=NA, layout=layout_in_circle)
+```
 
 ---
 ## Lexical network ([`Chinese Wordnet`]())
 <img src="assets/img/cwn.png" alt="Drawing" style="width: 400px;"/>
 
 
+
+
+---
+## Vector Semantics
+
+- Like the **neural language models**, the `word2vec` models learn embeddings by training
+a network to predict neighboring words.
+
+
+
+
+
+
+
+---
+## Vector Semantics 
+Word Embeddings
+
+<!--
+<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>  -->
+
+<!-- <img src="images/embeddings.png" alt="Drawing" style="width: 400px;"/> -->
+
+
+
+---
+## Neural Semantic Network
+`Gallant lab Brain Viewer`
+
+
+---
+## Neural Semantic Network
+
+
+
+
+---
+## Human Connectome Project (HCP)
+
+> a [consortium](https://www.humanconnectome.org/) whose goal is to map “human brain circuitry in a target number of 1200 healthy adults using cutting-edge methods of noninvasive neuroimaging” 
+
+
+---
+## Neural WordNet
+
+<img src="assets/img/ontolex_wn.png" alt="Drawing" style="width: 500px;"/>
+https://www.youtube.com/watch?v=0FDtsbLZBuM 
 
 
 ---
@@ -162,12 +226,31 @@ DeepMind 的 leader 要跟神經科學學習 / Hinton 認為 back-propagation �
 
 
 ---
-## Vector Semantics 
-Word Embeddings
+## Chinese QIE
 
-<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>
+- Is Construction Grammar Neuroscientifically Plausible? 
 
-<!-- <img src="images/embeddings.png" alt="Drawing" style="width: 400px;"/> -->
+<!--
+```{r, echo=FALSE}
+library(oro.nifti)
+img <- readNIfTI("~/Dropbox/心智科學腦影像計畫子計畫3/實驗.程式.資料/Neural.data/fMRI.data.analysis/example/Template-T1-U8-RALPFH-BR.nii.gz", reorient = FALSE)
+image(img, z = 225, plot.type = "single")
+
+```
+-->
+
+---
+## Chinese QIE
+
+```{r}
+#orthographic(img)
+```
+
+
+
+
+
+
 
 
 
@@ -202,6 +285,8 @@ Word Embeddings
 ## Reference
 
 [1] Huth AG, de Heer WA, Griffiths TL, Theunissen FE, & Gallant JL (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532 (7600), 453-8 PMID: 27121839
+
+[2] Friedemann Pulvermüller, Bert Cappelle and Yury Shtyrov. (2013). Brain basis of meaning, words, constructions, and grammar. In: Graeme Trousdale and Thomas Hoffmann (eds.), Oxford Handbook of Construction Grammar. Oxford: Oxford University Press, 397-416. 
 
 
 
