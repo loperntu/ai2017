@@ -527,25 +527,34 @@ image(img, z = 225, plot.type = "single")
 
 ---
 ## 結論，有嗎之一
-## AI needs greater representation from the humanities
+### AI needs greater representation from the humanities
 
 - 人的問題涉及行為、經驗、心靈、意識、生理變化等。
 - 語言裡反映了慾望、記憶與遺忘、錯誤、情緒、愛、性格。
-    
->  人格面具,自我實現、善心、惻隱之心、同情心、助人、愛心、民主、創造、
-    幽默、風趣、詼諧、恐懼、自卑、氣質、非理性決策（直覺
 
-
----
-## 再確認：妳是人嗎
-
+> 再確認：妳是人嗎
 下面這句話一秒鐘看完並說出意思
-
-> [賣女孩的小火柴][請上獎領台]
-
-
+[賣女孩的小火柴][請上獎領台]
+ 
+    
 ---
 ## 結論，有嗎之二
+### call for 同理計算 (computational empathetic communication) 
+`人格面具,自我實現、善心、惻隱之心、同情心、助人、愛心、民主、創造、幽默、風趣、詼諧、恐懼、自卑、氣質、非理性決策（直覺`
+
+
+
+---
+## 結論，有嗎之三
+### From AI (人工智能) to AW (人工智慧)
+
+- 馬失業之後應該比較開心過馬的生活。
+- 人是什麼？機器是什麼？是變動的定義。
+> Kurzweil預計到 2030 年人類都會進化成半機械人（Elon Musk的 人機合一正是這項實驗， `Neurolink`），通過神經系統進入虛擬現實（VR）世界。事實上，AI早已改變人類行為。傳播學者 McLuhan 提出「人的延伸」，智慧手機就是「大腦延伸」。
+
+---
+## 結論，有嗎之四
+
 
 <img src="assets/img/ai.linguistics.png" alt="Drawing" style="width: 750px;"/>
 
