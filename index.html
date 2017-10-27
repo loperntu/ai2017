@@ -243,12 +243,30 @@ Deep Neural Networks</code></p>
 <section class="slide " id="slide-19">
   <div>
     <h2>AI, Neural Network (aka Deep Learning)</h2>
-    <p><img src="assets/img/zoo.jpg" alt="Drawing" style="width: 850px;"/></p>
+    <p>deep learning ＝ deep representation, 其梯度可以透過 chain rule 來反向傳播。
+<img src="assets/img/deep.jpg" alt="Drawing" style="width: 550px;"/></p>
 
   </div>
 </section>
 
 <section class="slide " id="slide-20">
+  <div>
+    <h2>AI, Neural Network (aka Deep Learning)</h2>
+    <p>按照能夠使得損失函數 L(W) 減小的方向 (e.g. 隨機梯度下降) 來調整參數訓練神經網絡。
+<img src="assets/img/deep2.jpg" alt="Drawing" style="width: 550px;"/></p>
+
+  </div>
+</section>
+
+<section class="slide " id="slide-21">
+  <div>
+    <h2>Neural Network (aka Deep Learning) Typology</h2>
+    <p><img src="assets/img/zoo.jpg" alt="Drawing" style="width: 850px;"/></p>
+
+  </div>
+</section>
+
+<section class="slide " id="slide-22">
   <div>
     <h2>(End-to-End) AI 實作快變成中學生的課外活動</h2>
     <p><img src="assets/img/dl.png" alt="Drawing" style="width: 450px;"/>
@@ -257,14 +275,25 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-21">
+<section class="slide " id="slide-23">
   <div>
     <h2>Keras: Deep Learning library in R or Python within 30 seconds</h2>
-    
+    <pre><code class="r">library(keras)
+mnist &lt;- dataset_mnist()
+model &lt;- keras_model_sequential() 
+model %&gt;% 
+  layer_dense(units = 256, activation = &#39;relu&#39;, 
+              input_shape = c(784)) %&gt;% 
+  layer_dropout(rate = 0.4) %&gt;% 
+  layer_dense(units = 128, activation = &#39;relu&#39;) %&gt;%
+  layer_dropout(rate = 0.3) %&gt;%
+  layer_dense(units = 10, activation = &#39;softmax&#39;)
+</code></pre>
+
   </div>
 </section>
 
-<section class="slide " id="slide-22">
+<section class="slide " id="slide-24">
   <div>
     <h2>但，我們應該假定這才是理解能力嗎</h2>
     <ul>
@@ -277,7 +306,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-23">
+<section class="slide " id="slide-25">
   <div>
     <h2>題外話</h2>
     <p>測試一下班上有沒有機器人:)</p>
@@ -290,7 +319,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-24">
+<section class="slide " id="slide-26">
   <div>
     <h2>Deep Learning: a hype or go-to algorithm?</h2>
     <ul>
@@ -301,7 +330,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-25">
+<section class="slide " id="slide-27">
   <div>
     <h2>Issues</h2>
     <ul>
@@ -316,7 +345,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-26">
+<section class="slide " id="slide-28">
   <div>
     <h2>Last miles of the way ?</h2>
     <ul>
@@ -332,7 +361,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-27">
+<section class="slide " id="slide-29">
   <div>
     <h2>[哲學思考] 丟一個問題給你，請想久一點</h2>
     <p>如果有機器通過了圖林測試，它還是機器嗎？
@@ -347,7 +376,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-28">
+<section class="slide " id="slide-30">
   <div>
     <h2>Talking to itself/themselves (娛樂效果之外的反思.....)</h2>
     <iframe width="620" height="390" src="https://www.youtube.com/embed/WnzlbyTZsQY" frameborder="0" allowfullscreen></iframe>
@@ -355,7 +384,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-29">
+<section class="slide " id="slide-31">
   <div>
     <h2>Outline</h2>
     <ol class = "build incremental">
@@ -376,7 +405,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-31">
+<section class="slide " id="slide-33">
   <div>
     <h2>人的歷程</h2>
     <blockquote>
@@ -386,14 +415,14 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-32">
+<section class="slide " id="slide-34">
   <div>
     <h2>人的語言</h2>
     
   </div>
 </section>
 
-<section class="slide " id="slide-33">
+<section class="slide " id="slide-35">
   <div>
     <h2>What is Linguistics?</h2>
     <ul>
@@ -410,7 +439,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-34">
+<section class="slide " id="slide-36">
   <div>
     <h2>What is NLP?</h2>
     <p>經驗/計算語言學 (empirical/computational linguistics) [a.k.a. Natural Language Processing] 用電腦來幫助我們回答上述問題，並產生應用。</p>
@@ -422,7 +451,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-35">
+<section class="slide " id="slide-37">
   <div>
     <h2>語言複雜度的處理</h2>
     <ul>
@@ -436,7 +465,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-36">
+<section class="slide " id="slide-38">
   <div>
     <h2>語言表徵與理解</h2>
     <h3>Semantic memory and categorization</h3>
@@ -460,7 +489,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-37">
+<section class="slide " id="slide-39">
   <div>
     <h2>Semantic memory</h2>
     <ul>
@@ -480,7 +509,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-38">
+<section class="slide " id="slide-40">
   <div>
     <h2>「知識救援」的個人看法</h2>
     <ul>
@@ -491,7 +520,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-39">
+<section class="slide " id="slide-41">
   <div>
     <h2>Machine Learning w/o Knowledge Representation and Annotation</h2>
     <ul>
@@ -506,7 +535,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-40">
+<section class="slide " id="slide-42">
   <div>
     <h2>More on Levels of Annotation</h2>
     <p>Units (crossing the sentence boundary) reflect the communicative function of the sentence</p>
@@ -518,7 +547,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-41">
+<section class="slide " id="slide-43">
   <div>
     <h2>Topic-Focus Articulation (TFA)</h2>
     <ul>
@@ -538,7 +567,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-42">
+<section class="slide " id="slide-44">
   <div>
     <h2>Deep (Linguistic) Learning: batteries included?</h2>
     <p>But, which Semantics?</p>
@@ -552,7 +581,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-43">
+<section class="slide " id="slide-45">
   <div>
     <h2>Network Representation of Semantics</h2>
     <iframe width="520" height="415" src="assets/widgets/nn.html" frameborder="0" allowfullscreen></iframe>
@@ -560,7 +589,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-44">
+<section class="slide " id="slide-46">
   <div>
     <h2>Network Analysis</h2>
     <p><code>micro motifs and macro behavior</code></p>
@@ -573,7 +602,7 @@ Deep Neural Networks</code></p>
   </div>
 </section>
 
-<section class="slide " id="slide-45">
+<section class="slide " id="slide-47">
   <div>
     <h2><strong>Small worlds</strong>:</h2>
     <p>&#39;six degrees of separation&#39; (Watts and Strogatz, 1998)</p>
@@ -587,7 +616,7 @@ plot(sw, vertex.size=6, vertex.label=NA, layout=layout_in_circle)
   </div>
 </section>
 
-<section class="slide " id="slide-46">
+<section class="slide " id="slide-48">
   <div>
     <h2>Lexical network (<a href=""><code>Wordnet</code></a>)</h2>
     <p><img src="assets/img/cwn.png" alt="Drawing" style="width: 400px;"/></p>
@@ -595,7 +624,7 @@ plot(sw, vertex.size=6, vertex.label=NA, layout=layout_in_circle)
   </div>
 </section>
 
-<section class="slide " id="slide-47">
+<section class="slide " id="slide-49">
   <div>
     <h2>Chinese Wordnet</h2>
     <ul>
@@ -606,7 +635,7 @@ plot(sw, vertex.size=6, vertex.label=NA, layout=layout_in_circle)
   </div>
 </section>
 
-<section class="slide " id="slide-48">
+<section class="slide " id="slide-50">
   <div>
     <h2>Vector Semantics</h2>
     <ul>
@@ -617,20 +646,19 @@ a network to predict neighboring words.</li>
   </div>
 </section>
 
-<section class="slide " id="slide-49">
+<section class="slide " id="slide-51">
   <div>
     <h2>Vector Semantics</h2>
     <p>Word Embeddings</p>
 
-<!--
-<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>  -->
+<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>
 
 <!-- <img src="images/embeddings.png" alt="Drawing" style="width: 400px;"/> -->
 
   </div>
 </section>
 
-<section class="slide " id="slide-50">
+<section class="slide " id="slide-52">
   <div>
     <h2>Neural Semantic Network</h2>
     <p><code>Gallant lab Brain Viewer</code></p>
@@ -638,14 +666,7 @@ a network to predict neighboring words.</li>
   </div>
 </section>
 
-<section class="slide " id="slide-51">
-  <div>
-    <h2>Neural Semantic Network</h2>
-    
-  </div>
-</section>
-
-<section class="slide " id="slide-52">
+<section class="slide " id="slide-53">
   <div>
     <h2>Human Connectome Project (HCP)</h2>
     <blockquote>
@@ -655,7 +676,7 @@ a network to predict neighboring words.</li>
   </div>
 </section>
 
-<section class="slide " id="slide-53">
+<section class="slide " id="slide-54">
   <div>
     <h2>Neural WordNet</h2>
     <ul>
@@ -663,16 +684,13 @@ a network to predict neighboring words.</li>
 ) Brain altas: same with Chinese?</li>
 </ul>
 
-<p><img style="float:middle" src="assets/img/polya.jpg" />
-<img align="middle" src="assets/img/polya.jpg" /></p>
-
-<p><img src="assets/img/ontolex_wn.png" alt="Drawing" style="width: 500px;"/>
+<p><img src="assets/img/ontolex_wn.png" alt="Drawing" style="width: 300px;"/>
 <a href="https://www.youtube.com/watch?v=0FDtsbLZBuM">https://www.youtube.com/watch?v=0FDtsbLZBuM</a> </p>
 
   </div>
 </section>
 
-<section class="slide " id="slide-54">
+<section class="slide " id="slide-55">
   <div>
     <h2><strong>(Words/Chunks?) on the Brain: A Semantic Map of the Cortex</strong></h2>
     <p>DeepMind 的 leader 要跟神經科學學習 / Hinton 認為 back-propagation 要打掉重練</p>
@@ -682,7 +700,7 @@ a network to predict neighboring words.</li>
   </div>
 </section>
 
-<section class="slide " id="slide-55">
+<section class="slide " id="slide-56">
   <div>
     <h2>Chinese QIEs</h2>
     <ul>
@@ -692,15 +710,6 @@ a network to predict neighboring words.</li>
 <!--
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png)
 -->
-
-  </div>
-</section>
-
-<section class="slide " id="slide-56">
-  <div>
-    <h2>Chinese QIEs</h2>
-    <pre><code class="r">#orthographic(img)
-</code></pre>
 
   </div>
 </section>
@@ -719,12 +728,18 @@ a network to predict neighboring words.</li>
 </ul></li>
 </ul>
 
-<p><img src="assets/img/qie.fmri.png" class="one-col-image"></p>
-
   </div>
 </section>
 
 <section class="slide " id="slide-58">
+  <div>
+    <h2>Chinese QIEs</h2>
+    <p><img src="assets/img/qie.fmri.png" alt="Drawing" style="width: 200px;"/></p>
+
+  </div>
+</section>
+
+<section class="slide " id="slide-59">
   <div>
     <h2>結論，有嗎之一</h2>
     <h2>AI needs greater representation from the humanities</h2>
@@ -735,20 +750,8 @@ a network to predict neighboring words.</li>
 </ul>
 
 <blockquote>
-<p>人格面具,自我實現、善心、惻隱之心、同情心、助人、愛心、民主、創造、
-    幽默、風趣、詼諧、恐懼、自卑、氣質、非理性決策（直覺</p>
-</blockquote>
-
-  </div>
-</section>
-
-<section class="slide " id="slide-59">
-  <div>
-    <h2>再確認：妳是人嗎</h2>
-    <p>下面這句話一秒鐘看完並說出意思</p>
-
-<blockquote>
-<p>[賣女孩的小火柴][請上獎領台]</p>
+<p>再確認妳是人嗎? 下面這句話一秒鐘看完並說出意思
+<a href="">賣女孩的小火柴</a> <a href="">請上獎領台</a></p>
 </blockquote>
 
   </div>
@@ -757,12 +760,39 @@ a network to predict neighboring words.</li>
 <section class="slide " id="slide-60">
   <div>
     <h2>結論，有嗎之二</h2>
-    <p><img src="assets/img/ai.linguistics.png" alt="Drawing" style="width: 750px;"/></p>
+    <h2>call for 同理計算 (computational empathetic communication)</h2>
+
+<p><code>人格面具,自我實現、善心、惻隱之心、同情心、助人、愛心、民主、創造、幽默、風趣、詼諧、恐懼、自卑、氣質、非理性決策（直覺</code></p>
 
   </div>
 </section>
 
 <section class="slide " id="slide-61">
+  <div>
+    <h2>結論，有嗎之三</h2>
+    <h2>From AI (人工智能) to AW (人工智慧)</h2>
+
+<ul>
+<li>馬失業之後應該比較開心過馬的生活。</li>
+<li>人是什麼？機器是什麼？是變動的定義。</li>
+</ul>
+
+<blockquote>
+<p>Kurzweil預計到 2030 年人類都會進化成半機械人（Elon Musk的 人機合一正是這項實驗， <code>Neurolink</code>），通過神經系統進入虛擬現實（VR）世界。事實上，AI早已改變人類行為。傳播學者 McLuhan 提出「人的延伸」，智慧手機就是「大腦延伸」。</p>
+</blockquote>
+
+  </div>
+</section>
+
+<section class="slide " id="slide-62">
+  <div>
+    <h2>結論，有嗎之四</h2>
+    <p><img src="assets/img/ai.linguistics.png" alt="Drawing" style="width: 750px;"/></p>
+
+  </div>
+</section>
+
+<section class="slide " id="slide-63">
   <div>
     <h2>Reference</h2>
     <p>[1] Huth AG, de Heer WA, Griffiths TL, Theunissen FE, &amp; Gallant JL (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532 (7600), 453-8 PMID: 27121839</p>

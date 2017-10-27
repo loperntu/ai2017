@@ -172,8 +172,23 @@ Deep Neural Networks`
 
 ---
 ## AI, Neural Network (aka Deep Learning)
+deep learning ＝ deep representation, 其梯度可以透過 chain rule 來反向傳播。
+<img src="assets/img/deep.jpg" alt="Drawing" style="width: 550px;"/>
+
+
+
+---
+## AI, Neural Network (aka Deep Learning)
+
+按照能夠使得損失函數 L(W) 減小的方向 (e.g. 隨機梯度下降) 來調整參數訓練神經網絡。
+<img src="assets/img/deep2.jpg" alt="Drawing" style="width: 550px;"/>
+
+
+---
+## Neural Network (aka Deep Learning) Typology
 
 <img src="assets/img/zoo.jpg" alt="Drawing" style="width: 850px;"/>
+
 
 
 
@@ -188,6 +203,18 @@ Deep Neural Networks`
 ## Keras: Deep Learning library in R or Python within 30 seconds
 
 
+```r
+library(keras)
+mnist <- dataset_mnist()
+model <- keras_model_sequential() 
+model %>% 
+  layer_dense(units = 256, activation = 'relu', 
+              input_shape = c(784)) %>% 
+  layer_dropout(rate = 0.4) %>% 
+  layer_dense(units = 128, activation = 'relu') %>%
+  layer_dropout(rate = 0.3) %>%
+  layer_dense(units = 10, activation = 'softmax')
+```
 
 
 ---
@@ -433,8 +460,7 @@ a network to predict neighboring words.
 ## Vector Semantics 
 Word Embeddings
 
-<!--
-<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>  -->
+<iframe width="800" height="515" src="http://140.112.147.121:8288" frameborder="0" allowfullscreen></iframe>
 
 <!-- <img src="images/embeddings.png" alt="Drawing" style="width: 400px;"/> -->
 
@@ -443,11 +469,6 @@ Word Embeddings
 ---
 ## Neural Semantic Network
 `Gallant lab Brain Viewer`
-
-
----
-## Neural Semantic Network
-
 
 
 
@@ -463,10 +484,7 @@ Word Embeddings
 - Neurologically-based Ontology and Semantic Space (Huth et al. 2012; Huth et al. 2016, Nature
 ) Brain altas: same with Chinese?
 
-<img style="float:middle" src="assets/img/polya.jpg" />
-<img align="middle" src="assets/img/polya.jpg" />
-
-<img src="assets/img/ontolex_wn.png" alt="Drawing" style="width: 500px;"/>
+<img src="assets/img/ontolex_wn.png" alt="Drawing" style="width: 300px;"/>
 https://www.youtube.com/watch?v=0FDtsbLZBuM 
 
 
@@ -490,13 +508,6 @@ DeepMind 的 leader 要跟神經科學學習 / Hinton 認為 back-propagation �
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png)
 -->
 
----
-## Chinese QIEs
-
-
-```r
-#orthographic(img)
-```
 
 
 ---
@@ -508,8 +519,10 @@ DeepMind 的 leader 要跟神經科學學習 / Hinton 認為 back-propagation �
   - Near conditions at left AG and IFG (left Inferior frontal gyrus )
   - No significant difference found in Far vs. Random condition.
 
-<img src="assets/img/qie.fmri.png" class="one-col-image">
+---
+## Chinese QIEs
 
+<img src="assets/img/qie.fmri.png" alt="Drawing" style="width: 200px;"/>
 
 
 
@@ -527,21 +540,31 @@ DeepMind 的 leader 要跟神經科學學習 / Hinton 認為 back-propagation �
 
 - 人的問題涉及行為、經驗、心靈、意識、生理變化等。
 - 語言裡反映了慾望、記憶與遺忘、錯誤、情緒、愛、性格。
-    
->  人格面具,自我實現、善心、惻隱之心、同情心、助人、愛心、民主、創造、
-    幽默、風趣、詼諧、恐懼、自卑、氣質、非理性決策（直覺
 
-
----
-## 再確認：妳是人嗎
-
-下面這句話一秒鐘看完並說出意思
-
-> [賣女孩的小火柴][請上獎領台]
+> 再確認妳是人嗎? 下面這句話一秒鐘看完並說出意思
+[賣女孩的小火柴]() [請上獎領台]()
 
 
 ---
 ## 結論，有嗎之二
+## call for 同理計算 (computational empathetic communication) 
+
+`人格面具,自我實現、善心、惻隱之心、同情心、助人、愛心、民主、創造、幽默、風趣、詼諧、恐懼、自卑、氣質、非理性決策（直覺`
+
+
+
+---
+## 結論，有嗎之三
+## From AI (人工智能) to AW (人工智慧)
+
+- 馬失業之後應該比較開心過馬的生活。
+- 人是什麼？機器是什麼？是變動的定義。
+
+> Kurzweil預計到 2030 年人類都會進化成半機械人（Elon Musk的 人機合一正是這項實驗， `Neurolink`），通過神經系統進入虛擬現實（VR）世界。事實上，AI早已改變人類行為。傳播學者 McLuhan 提出「人的延伸」，智慧手機就是「大腦延伸」。
+
+---
+## 結論，有嗎之四
+
 
 <img src="assets/img/ai.linguistics.png" alt="Drawing" style="width: 750px;"/>
 
